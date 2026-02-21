@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-management-backend
+spec:
+  selector:
+    app: project-management-backend
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: ClusterIP

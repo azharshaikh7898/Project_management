@@ -1,0 +1,50 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 777 >>
+stream
+BT
+/F1 11 Tf
+50 760 Td (Project Management DevOps Documentation) Tj
+0 -16 Td
+50 744 Td (Architecture: S3+CloudFront, API Gateway+ALB+EC2 ASG, RDS PostgreSQL, Private S3) Tj
+0 -16 Td
+50 728 Td (Infrastructure as Code: Terraform with VPC, subnets, NAT, SG, ASG, ALB, RDS, S3, IAM) Tj
+0 -16 Td
+50 712 Td (CI/CD: GitHub Actions pipeline with lint/test/build/push/deploy/cache invalidation) Tj
+0 -16 Td
+50 696 Td (Monitoring: CloudWatch logs/metrics/alarms, health checks, structured JSON logging) Tj
+0 -16 Td
+50 680 Td (Security: least privilege IAM, private DB, TLS/ACM, JWT auth, bcrypt, encrypted storage) Tj
+0 -16 Td
+50 664 Td (DR: Multi-AZ RDS, backups, runbooks, regional failover strategy) Tj
+0 -16 Td
+50 648 Td (See docs/ and diagrams/ for complete details.) Tj
+0 -16 Td
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001069 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1139
+%%EOF

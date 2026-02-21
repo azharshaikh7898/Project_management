@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euo pipefail
+
+apt-get update -y
+apt-get install -y docker.io awscli
+systemctl enable docker
+systemctl start docker
+
+cat >/opt/backend.env <<EOF
+PORT=3000
+DATABASE_URL=${db_url}
+DB_SSL=true
+JWT_SECRET=${jwt_secret}
+LOG_LEVEL=info
+CORS_ORIGINS=https://example.com
+EOF
+
+docker pull ${ecr_image}
+docker run -d --name backend --restart always -p 3000:3000 --env-file /opt/backend.env ${ecr_image}

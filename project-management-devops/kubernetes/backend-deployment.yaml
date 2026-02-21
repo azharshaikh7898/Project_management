@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-management-backend
+  labels:
+    app: project-management-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: project-management-backend
+  template:
+    metadata:
+      labels:
+        app: project-management-backend
+    spec:
+      containers:
+        - name: backend
+          image: 111111111111.dkr.ecr.us-east-1.amazonaws.com/project-management-backend:latest
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
